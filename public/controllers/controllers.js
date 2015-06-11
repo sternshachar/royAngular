@@ -84,7 +84,7 @@ angular.module("royApp")
     
     var slides = $scope.slides = [
       {image: 'images/art.jpg', head: 'יצירתיות', text: '' ,active: true},
-      {image: 'images/mobile-view.jpg', head: 'פרספקטיבה', text: '' , active: false},
+      {image: 'images/dreamy.jpg', head: 'פרספקטיבה', text: '' , active: false},
       {image: 'images/growth.jpg', head: 'קרקע איתנה', text: '', active: false}    
       ];
 
