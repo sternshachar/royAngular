@@ -104,6 +104,7 @@ p  {
 
    .navbar{
       background-color: white; 
+      font-size: 18px;
    }
 
    .nav li.active a {
