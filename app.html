@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="royApp">
+	<head>
+		 <meta charset="UTF-8">
+		 <title>ר. שטרן | עורכי דין</title>
+		 <meta name="description" content="">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+
+		 <script src="angular.js"></script>
+
+		 		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap-rtl.css" rel="stylesheet">
+		<link href="bootstrap-theme.css" rel="stylesheet" />
+		<script src="ui-bootstrap-tpls-0.12.0.min.js"></script>
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href="includes/css/styles.css" rel="stylesheet">
+		 <script>
+			angular.module("royApp", ["customFilters","ngRoute","ui.bootstrap","ui.router","ngAnimate","ngTouch"]);
+
+			angular.module("royApp")
+				.config(function($routeProvider){
+					$routeProvider.when("/news",{
+						templateUrl:"views/tabs.html",
+						controller:"tabsCtrl"
+					});
+
+
+					$routeProvider.when("/about",{
+						templateUrl:"views/tabs.html",
+						controller:"tabsCtrl"
+					});
+
+					$routeProvider.when("/principles",{
+						templateUrl:"views/tabs.html",
+						controller:"tabsCtrl"
+					});
+
+					$routeProvider.when("/practice",{
+						templateUrl:"views/tabs.html",
+						controller:"tabsCtrl"
+					});
+					
+					$routeProvider.when("/update",{
+						templateUrl:"views/tabs.html",
+						controller:"tabsCtrl"
+					});
+
+					$routeProvider.when("/staff",{
+						templateUrl:"views/tabs.html",
+						controller:"tabsCtrl"
+					});
+					$routeProvider.when("",{
+						templateUrl:"views/carousel.html"
+					});
+					$routeProvider.otherwise({
+						templateUrl:"views/carousel.html"
+					});
+
+
+				});
+
+
+		 </script>
+		 <script src="ngmodules/angular-ui-router.js"></script>
+		 <script src="filters/customFilters.js"></script>
+		 <script src="ngmodules/angular-route.js"></script>
+		 <script src="ngmodules/angular-animate.js"></script>
+		 <script src="ngmodules/angular-touch.js"></script>
+		 <script src="controllers/controllers.js"></script>
+	</head>
+	<body ng-controller="mainCtrl">
+		<div class="container">
+			<ng-include src="'views/navigation.html'"></ng-include>
+			<!-- <ng-include src="'views/carousel.html'"></ng-include> -->
+			<br>
+			<br>
+			<br>
+			<!-- <ng-include src="'views/news.html'"></ng-include> -->
+
+			<ng-view></ng-view>
+
+			
+		</div><!-- end container -->
+		<ng-include src="'views/footer.html'"></ng-include>
+	</body>
+</html>

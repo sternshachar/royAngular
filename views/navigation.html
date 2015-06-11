@@ -1,0 +1,72 @@
+		<div class="navbar navbar-fixed-top" ng-controller="dropdownMenusCtrl">
+			<div class="container">
+
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<div ng-controller="CollapseCtrl">
+					<button ng-click="isCollapsed = !isCollapsed" class="btn navbar-toggle">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				
+				<a class="navbar-brand" href="app.html" ng-click="isCollapsed = true"><img src="images/logo.png" alt="רועי שטרן"></a>
+
+				<div collapse="isCollapsed" class="nav-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="app.html">ראשי</a>
+						</li>
+
+						<li class="dropdown" dropdown on-toggle="toggled(open)">
+							<a href class="dropdown-toggle" dropdown-toggle>אודות <strong class="caret"></strong></a>
+
+							<ul class="dropdown-menu">
+								<li ng-repeat="topic in aboutTabs">
+									<a href="{{topic.url}}" ng-click="changeTab($index,'about')">{{topic.title}}</a>
+								</li>
+							</ul>
+						</li><!-- end dropdown-menu -->
+
+						<li class="dropdown" dropdown on-toggle="toggled(open)">
+							<a  href class="dropdown-toggle" dropdown-toggle>תחומי עיסוק <strong class="caret"></strong></a>
+
+							<ul class="dropdown-menu">
+								<li ng-repeat="topic in practiceTabs">
+									<a href="{{topic.url}}" ng-click="changeTab($index,'practice')">{{topic.title}}</a>
+								</li> <!-- ng-click="selectTab($index)" -->
+							</ul>
+						</li><!-- end dropdown-menu -->
+
+						<li class="dropdown" dropdown on-toggle="toggled(open)">
+							<a  href class="dropdown-toggle" dropdown-toggle>צוות <strong class="caret"></strong></a>
+
+							<ul class="dropdown-menu">
+								<li ng-repeat="topic in staffTabs">
+									<a href="{{topic.url}}" ng-click="changeTab($index,'staff')">{{topic.title}}</a>
+								</li> <!-- ng-click="selectTab($index)" -->
+							</ul>
+						</li><!-- end dropdown-menu -->
+
+						<li class="dropdown" dropdown on-toggle="toggled(open)">
+							<a  href class="dropdown-toggle" dropdown-toggle>חדשות <strong class="caret"></strong></a>
+
+							<ul class="dropdown-menu">
+								<li ng-repeat="topic in newsTabs">
+									<a href="{{topic.url}}" ng-click="changeTab($index,'news')">{{topic.title}}</a>
+								</li> <!-- ng-click="selectTab($index)" -->
+							</ul>
+						</li><!-- end dropdown-menu -->
+
+						<li>
+							<a href="https://sirshachar.wordpress.com/">בלוג</a>
+						</li>
+
+						<li ng-controller="ModalCtrl">
+							<a href ng-click="open()">צור קשר</a>							
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>	
+		</div><!-- end navbar -->
+		<br>

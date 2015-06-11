@@ -1,0 +1,31 @@
+
+<tabset>
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" >
+
+	    <div class="list-group" ng-if="!news" >
+
+			<img ng-src="{{tab.image}}" class="thumbnail pull-right">
+			<h3>{{tab.title}}</h3>
+			<hr>
+			<p>{{tab.content}}
+			</p>
+		</div>
+
+		<div ng-controller="AccordionCtrl" ng-if="newsTabs[0].active && news">
+			<br>
+		    <accordion>
+		        <accordion-group heading="{{group.title}}" ng-repeat="group in newsGroups">
+		            <p>{{group.content}}</p>
+		        </accordion-group>
+		    </accordion>
+		</div>
+
+		<div class="list-group" ng-if="newsTabs[1].active && news">
+			<br>
+			  <a href="#" class="list-group-item" ng-repeat="group in newsGroups">
+			    <h4 class="list-group-item-heading">{{group.title}}</h4>
+			    <p class="list-group-item-text">{{group.content}}</p>
+			  </a>
+		</div>
+  	</tab>
+</tabset>
