@@ -48,18 +48,18 @@
 						</li><!-- end dropdown-menu -->
 
 						<li class="dropdown" dropdown on-toggle="toggled(open)">
-							<a  href class="dropdown-toggle" dropdown-toggle>חדשות <strong class="caret"></strong></a>
+							<a  href="index.html#/news" class="dropdown-toggle" dropdown-toggle>חדשות</a>
 
-							<ul class="dropdown-menu">
+<!-- 							<ul class="dropdown-menu"> //dropdown for news
 								<li ng-repeat="topic in newsTabs">
 									<a href="{{topic.url}}" ng-click="changeTab($index,'news')">{{topic.title}}</a>
-								</li> <!-- ng-click="selectTab($index)" -->
-							</ul>
+								</li> 
+							</ul> -->
 						</li><!-- end dropdown-menu -->
 
-						<li>
+						<!-- <li> This is a bog
 							<a href="https://sirshachar.wordpress.com/">בלוג</a>
-						</li>
+						</li> -->
 
 						<li ng-controller="ModalCtrl">
 							<a href ng-click="open()">צור קשר</a>							
