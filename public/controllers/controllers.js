@@ -83,9 +83,9 @@ angular.module("royApp")
     $scope.myInterval = 10000;
     
     var slides = $scope.slides = [
-      {image: 'images/paint1.jpg', head: 'יצירתיות', text: '' ,active: true},
-      {image: 'images/dreamy.jpg', head: 'פרספקטיבה', text: '' , active: false},
-      {image: 'images/growth.jpg', head: 'קרקע איתנה', text: '', active: false}    
+      {image: 'images/notes.jpg', head: 'יצירתיות', text: '' ,active: true},
+      {image: 'images/city.jpg', head: 'פרספקטיבה', text: '' , active: false},
+      {image: 'images/bird.jpg', head: 'קרקע איתנה', text: '', active: false}    
       ];
 
       $scope.autoSlide = function(){

@@ -1,9 +1,13 @@
-<div class="carousel" ng-controller="carouselCtrl"> 
-      <div ng-repeat="slide in slides">
-      	<div class="slide" ng-if="slide.active" ng-class="stackOn($index)" ng-swipe-right="changeSlide('prev')" ng-swipe-left="changeSlide('next')">
-      		<a href ng-click="changeSlide('next')"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      		<a href ng-click="changeSlide('prev')"><span class="glyphicon glyphicon-chevron-right"></span></a>
-	        <img class="carousel-image" ng-src="{{slide.image}}">
-	    </div>
-      </div>
+<div class="col-md-6">
+</div>
+<div class="col-md-6">
+	<div class="carousel" ng-controller="carouselCtrl"> 
+	      <div ng-repeat="slide in slides">
+	      	<div class="slide" ng-if="slide.active" ng-class="stackOn($index)" ng-swipe-right="changeSlide('prev')" ng-swipe-left="changeSlide('next')">
+	      		<a href ng-click="changeSlide('next')"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	      		<a href ng-click="changeSlide('prev')"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		        <img class="carousel-image" ng-src="{{slide.image}}">
+		    </div>
+	      </div>
+	</div>
 </div>
