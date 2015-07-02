@@ -159,6 +159,10 @@ content: "\e080";
       margin-bottom: 30px;
    }
 
+   .carousel-image{
+      width: 100%;
+   }
+
    .carousel-caption {
       font-size: 20px;
       -webkit-text-stroke-width: 1px;
