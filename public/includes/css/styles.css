@@ -138,7 +138,7 @@ content: "\e080";
       margin-right: auto;
       margin-left: auto;
       width: 100%;
-      position: relative;
+      position: absolute;
       
    }
    .slide{
@@ -147,6 +147,7 @@ content: "\e080";
       position: relative;
       padding-top: auto;
       padding-bottom: auto;
+      width: 100%;
       
    }
    .carousel{
