@@ -152,6 +152,7 @@ content: "\e080";
    .carousel{
       position: relative;
       padding: auto;
+      width: 100%;
    }
    .carousel-heading {
       font-size: 34px;
