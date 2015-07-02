@@ -4,7 +4,7 @@
 
 	    <div class="list-group" ng-if="!news" >
 
-			<img ng-src="{{tab.image}}" class="thumbnail pull-right">
+			<img ng-src="{{tab.image}}" class="thumbnail pull-right" ng-hide="tab.image == ''">
 			<h3>{{tab.title}}</h3>
 			<hr>
 			<p>{{tab.content}}
