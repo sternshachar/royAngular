@@ -138,7 +138,7 @@ content: "\e080";
       margin-right: auto;
       margin-left: auto;
       width: 100%;
-      position: absolute;
+      position: relative;
       
    }
    .slide{
@@ -158,10 +158,6 @@ content: "\e080";
       font-size: 34px;
       font-family: "Gisha";
       margin-bottom: 30px;
-   }
-
-   .carousel-image{
-      width: 100%;
    }
 
    .carousel-caption {
