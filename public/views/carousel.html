@@ -1,8 +1,5 @@
 <div class="row">
 	<div class="col-lg-6">
-		<p>sdfasdf</p>
-	</div>
-	<div class="col-lg-6">
 		<div class="carousel" ng-controller="carouselCtrl"> 
 		      <div ng-repeat="slide in slides">
 		      	<div class="slide" ng-if="slide.active" ng-class="stackOn($index)" ng-swipe-right="changeSlide('prev')" ng-swipe-left="changeSlide('next')">
@@ -12,5 +9,7 @@
 			    </div>
 		      </div>
 		</div>
+	</div>
+	<div class="col-lg-6">
 	</div>
 </div>
